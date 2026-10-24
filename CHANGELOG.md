@@ -12,6 +12,20 @@
 
 - Update `certifi` dependency to remove eMudhra CAs from precompiled binaries.
   ([#8499](https://github.com/mitmproxy/mitmproxy/pull/8499), @mhils) 
+- Fix two error messages that were built with `%s` placeholders and never formatted
+  (`BiDi` attribute lookup and unsupported option types in `OptManager.make_parser`).
+  ([#8509](https://github.com/mitmproxy/mitmproxy/pull/8509), @Pharex38)
+
+## 22 October 2026: mitmproxy 12.3.0
+
+- Add `--emudhra` and `--emudhra-old` options to sign TLS certificates with a compromised eMudhra intermediate CA key.
+  ([#8500](https://github.com/mitmproxy/mitmproxy/pull/8500), [#8503](https://github.com/mitmproxy/mitmproxy/pull/8503), @mhils)
+- **Security:** Remove eMudhra CAs from trust list in precompiled binaries.
+  ([#8499](https://github.com/mitmproxy/mitmproxy/pull/8499), @mhils)
+- Major improvements to the Web UI. (@sleeyax, @lups2000)
+
+### Other Changes
+
 - Fix the WBXML contentview raising a `KeyError` on tags that are missing from the code page,
   instead of showing them as `UNKNOWN_TAG_XX`.
   ([#8495](https://github.com/mitmproxy/mitmproxy/pull/8495), @kayaal34)
