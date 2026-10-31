@@ -12,6 +12,9 @@
 
 - Update `certifi` dependency to remove eMudhra CAs from precompiled binaries.
   ([#8499](https://github.com/mitmproxy/mitmproxy/pull/8499), @mhils) 
+- Expand `~` in the `hardump` option, like other file path options. Previously, the HAR file
+  could not be written on exit and the collected flows were lost.
+  ([#8541](https://github.com/mitmproxy/mitmproxy/pull/8541), @memx13)
 - Fix filter expressions where a filter without an argument is followed by a closing bracket,
   e.g. `!(~s)` or `(~q & ~s)`, which were rejected as invalid.
   ([#8537](https://github.com/mitmproxy/mitmproxy/pull/8537), @qodelicious)
